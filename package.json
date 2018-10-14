@@ -1,0 +1,8 @@
+{
+  "name": "MyCalisthenics",
+  "version": "1.0.0",
+  "description": "Progress tracker of calisthenics skills and exercise",
+  "main": "index.js",
+  "author": "Matteo Velludini",
+  "license": "MIT"
+}
