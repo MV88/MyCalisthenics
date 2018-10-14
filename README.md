@@ -1,19 +1,11 @@
-# phoneword demo
-A React phoneword application
+# My Calisthenics
+It's a traker of a progresses a calisthenics athlete can achieve over time
+
+You can add personal objective in order to keep you motivated once you have reached them.
+This helps you to continuing push your goals.
 
 ## Server
-For the server you need to be sure to having all installed by inserting
-`npm install`
-
-be sure to have installed globally *nodemon*
-`npm install -g nodemon`
-
-in order to start the server return
-`npm start`
-
-Note: Server runs at `http://localhost:5000`
-
-It implements a web service at `http://localhost:8080/words/:number` where number is the combination of letters inserted by the user
+TBD
 
 ## Client
 
@@ -28,10 +20,16 @@ In order to start the application run:
 browse to `http://localhost:8080`
 
 ## Further improvements
-- adding a loading spinner
+
+### Features
+- Have a quick menu that helps to jump over pages (Home/Dashboard, Objective, Personal Results)
+- Editing page for managing Objectives
+- Editing page for updating personal results on the different exercises
+- Some sort of rewards once an objective is reached
+- Share achievement goals on socials network
+
+### Development related
 - integrate RxJs for better managing async operation
-- adding more unit tests
-- adding a database support with mongogb
-- add authentication if needed
-- a better error handling
+- adding unit tests
+- adding a database support with mongoDB
 - using less or sass for better css management
