@@ -3,9 +3,9 @@ import { connect } from 'react-redux';
 import { Grid } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
-class GridPhone extends Component {
+class Dashboard extends Component {
   render() {
-    const {words, number, dispatch} = this.props;
+    const {records, dispatch} = this.props;
     return (
       <div className="dashboard">
         Dashboard
@@ -19,16 +19,16 @@ class GridPhone extends Component {
   }
 };
 
-GridPhone.propTypes = {
-  words: PropTypes.array,
+Dashboard.propTypes = {
+  records: PropTypes.array,
   number: PropTypes.string
 }
 
 const mapStateToProps = state => {
   return {
-    words: state.phoneword.words,
+    records: state.phoneword.words,
     number: state.phoneword.number
   }
 }
 
-export default connect(mapStateToProps)(GridPhone);
+export default connect(mapStateToProps)(Dashboard);
