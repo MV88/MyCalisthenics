@@ -8,9 +8,9 @@ const initialState = {
 
 export default (state = initialState, action) => {
     let updated = assign({}, state);
-    switch(action.type) {
+    switch (action.type) {
         case TODO: {
-            updated['records'] = action.records;
+            updated.records = action.records;
             return updated;
         }
 

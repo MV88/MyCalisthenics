@@ -5,7 +5,7 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: './src/indexTemplate.html',
   filename: 'index.html',
   inject: 'body'
-})
+});
 
 
 module.exports = {
@@ -19,11 +19,30 @@ module.exports = {
 	},
 	plugins: [HtmlWebpackPluginConfig],
     module: {
-    	rules: [
-    		{
+        rules: [{
           test: /\.(js|jsx)$/,
           loader: 'babel-loader',
           exclude: /node_modules/
+      },
+        {
+            test: /\.(png|jp(e*)g|svg)$/,
+            use: [{
+                loader: 'url-loader',
+                options: {
+                    limit: 8192, // Convert images < 8kb to base64 strings
+                    name: '[path][name].[ext]'
+                }
+            }]
+        },
+        {
+            test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+            use: [{
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]',
+                    outputPath: 'fonts/'
+                }
+            }]
         },
         {
           test: /\.css$/,
@@ -33,8 +52,7 @@ module.exports = {
             loader: 'css-loader'
           }]
         }
-    	]
-  	},
+    ]},
     devServer: {
         historyApiFallback: true,
         proxy: {
@@ -51,4 +69,4 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.jsx']
     }
-}
+};
