@@ -10,6 +10,7 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 
 module.exports = {
     entry: [
+        'webpack-dev-server/client?http://0.0.0.0:8081',
         "./src/app.js"
     ],
 	output: {
