@@ -3,3 +3,9 @@
     height: 100%;
     width: 100%;
 }
+
+[class*='icon-'] {
+    width: 28.32px;
+    height: 24px;
+    fill: white;
+}
