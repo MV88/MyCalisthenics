@@ -4,6 +4,7 @@ import { combineEpics } from 'redux-observable';
 // reducers
 
 import reducerProgress from '../reducers/progress';
+import reducerDashboard from '../reducers/dashboard';
 
 // epics
 import epicProgress from '../epics/progress';
@@ -13,5 +14,6 @@ export const rootEpic = combineEpics(
 );
 
 export const rootReducer = combineReducers({
-  progress: reducerProgress
+  progress: reducerProgress,
+  dashboard: reducerDashboard
 });

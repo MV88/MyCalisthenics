@@ -1,0 +1,44 @@
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! semantic-ui-react */ "./node_modules/semantic-ui-react/dist/es/index.js");
+/* harmony import */ var _presentation_Icon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../presentation/Icon */ "./src/components/presentation/Icon.jsx");
+
+
+
+
+const MainSidebar = (active = "dashboard") => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Sidebar"].Pushable, {
+  as: semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Segment"]
+}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Sidebar"], {
+  as: semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Menu"],
+  animation: "push",
+  icon: "labeled",
+  inverted: true,
+  vertical: true,
+  visible: true,
+  width: "thin"
+}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Menu"].Item, {
+  as: "a"
+}, "LOGO"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Menu"].Item, {
+  as: "a",
+  active: active === "dashboard"
+}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentation_Icon__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  name: "gym-bars"
+}), "Dashboard"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Menu"].Item, {
+  as: "a",
+  active: active === "progress"
+}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentation_Icon__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  name: "pull-up-posture"
+}), "Progresses"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Menu"].Item, {
+  as: "a",
+  active: active === "objective"
+}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentation_Icon__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  name: "gym-bars"
+}), "Objectives")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Sidebar"].Pusher, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Segment"], {
+  basic: true
+}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_1__["Header"], {
+  as: "h3"
+}, "Application Content"))));
+
+/* harmony default export */ __webpack_exports__["default"] = (MainSidebar);
