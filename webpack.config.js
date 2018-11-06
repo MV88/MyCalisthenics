@@ -66,6 +66,7 @@ module.exports = {
             }
         }
     },
+    devtool: 'inline-source-lookup',
     mode: 'development',
     resolve: {
         extensions: ['.js', '.jsx']
