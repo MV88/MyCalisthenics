@@ -1,6 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: './src/indexTemplate.html',
   filename: 'index.html',
@@ -24,7 +23,7 @@ module.exports = {
           test: /\.(js|jsx)$/,
           loader: 'babel-loader',
           exclude: /node_modules/
-      },
+        },
         {
             test: /\.(png|jp(e*)g|svg)$/,
             use: [{
@@ -46,12 +45,12 @@ module.exports = {
             }]
         },
         {
-          test: /\.css$/,
-          use: [{
-            loader: 'style-loader'
-          }, {
-            loader: 'css-loader'
-          }]
+            test: /\.css$/,
+            use: [{
+                loader: 'style-loader'
+            }, {
+                loader: 'css-loader'
+            }]
         }
     ]},
     devServer: {

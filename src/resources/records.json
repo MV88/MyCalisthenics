@@ -1,0 +1,45 @@
+[
+    {
+        "exercise": "pull up",
+        "maxRep": 14,
+        "1RM": 40,
+        "dateCreation": "20-11-2018"
+    },
+    {
+        "exercise": "front lever",
+        "level": "tuck ADV",
+        "leg": null,
+        "isometry": 25,
+        "dateCreation": "20-11-2018"
+    },
+    {
+        "exercise": "front lever",
+        "level": {
+            "type":"one leg",
+            "leg": "dx"
+        },
+        "isometry": 8,
+        "dateCreation": "20-11-2018"
+    },
+    {
+        "exercise": "front lever",
+        "level": "one leg",
+        "leg": "sx",
+        "isometry": 10,
+        "dateCreation": "20-11-2018"
+    },
+    {
+        "exercise": "back lever",
+        "level": "one leg",
+        "leg": "dx",
+        "isometry": 8,
+        "dateCreation": "20-11-2018"
+    },
+    {
+        "exercise": "back lever",
+        "level": "one leg",
+        "leg": "sx",
+        "isometry": 10,
+        "dateCreation": "20-11-2018"
+    }
+]

@@ -1,35 +1,42 @@
 import React from "react";
 import {
-    Header,
+    Link
+} from "react-router-dom";
+import {
     Menu,
     Segment,
     Sidebar
 } from "semantic-ui-react";
 import Icon from "../presentation/Icon";
 
-const MainSidebar = ({
-    active = "dashboard",
-    onChangePage = () => {}
-}) => {
+const MainSidebar = ({children}) => {
+    const active = location.pathname.replace("/", "");
+
     return (<Sidebar.Pushable as={Segment}>
     <Sidebar as={Menu} animation="push" icon="labeled" inverted vertical visible width="thin">
-        <Menu.Item as="a">
+        <Menu.Item as="div">
             LOGO
         </Menu.Item>
-        <Menu.Item as="a" active={active === "dashboard"} onClick={() => onChangePage("dashboard")}>
-            <Icon name="gym-bars"/>Dashboard
-        </Menu.Item>
-        <Menu.Item as="a" active={active === "progress"} onClick={() => onChangePage("progress")}>
-            <Icon name="pull-up-posture"/>Progresses
-        </Menu.Item>
-        <Menu.Item as="a" active={active === "objective"} onClick={() => onChangePage("objective")}>
-            <Icon name="gym-bars"/>Objectives
-        </Menu.Item>
+        <Link to="/dashboard">
+            <Menu.Item as="div" active={active === "dashboard"}>
+                <Icon name="gym-bars"/>Dashboard
+            </Menu.Item>
+        </Link>
+        <Link to="/progresses">
+            <Menu.Item as="div" active={active === "progresses"}>
+                <Icon name="pull-up-posture"/>Progresses
+            </Menu.Item>
+        </Link>
+        <Link to="/objectives">
+            <Menu.Item as="div" active={active === "objectives"}>
+                <Icon name="gym-bars"/>Objectives
+            </Menu.Item>
+        </Link>
     </Sidebar>
 
     <Sidebar.Pusher>
         <Segment basic>
-            <Header as="h3">Application Content</Header>
+            {children}
         </Segment>
     </Sidebar.Pusher>
 </Sidebar.Pushable>);
